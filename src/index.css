@@ -1,13 +1,320 @@
+/* nullstyle*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+textarea {
+  resize: none;
+}
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: system-ui;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #e7f6ff;
+}
+
+.wrapper {
+  margin: 85px;
+  padding: 45px;
+  background-color: white;
+  border-radius: 10px;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+body h1 {
+  color: blue;
+  font-weight: bold;
+}
+
+li {
+  display: flex;
+  align-items: center;
+}
+
+li > span {
+  margin: 0 32px 0 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 44px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.slider img {
+  width: 100%;
+}
+
+.ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  align-items: center;
+}
+
+.catalog {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.head-catalog {
+  margin: 30px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.head-catalog input {
+  border: 0;
+}
+
+.head-catalog h1 {
+  font-size: 32px;
+  color: black;
+}
+
+.card {
+  max-width: 230px;
+  max-height: 300px;
+  border: solid 1px #f3f3f3;
+  /* margin: 0 40px 40px 0; */
+  padding: 30px;
+  border-radius: 20px;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0px 20px 35px rgba(0, 0, 0, 0.08);
+  transform: translateY(-5px);
+}
+
+.sneakers-img {
+  max-width: 133px;
+  max-height: 112px;
+  margin: 5px;
+}
+
+.sneakers-description {
+  font-size: 14px;
+  overflow-wrap: normal;
+  margin: 14px 0;
+}
+
+/* .favourite {
+  border: solid 1px #f3f3f3;
+  border-radius: 5px;
+  padding: 10px;
+} */
+
+.coast {
+  display: flex;
+  justify-content: space-between;
+}
+
+.coast p {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.search {
+  border: solid 1px #f3f3f3;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.search img {
+  padding: 0 5px 0 0;
+}
+
+.drawer {
+  position: absolute;
+  width: 420px;
+  height: 100%;
+  right: 0;
+  background: #fff;
+  box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  overflow: auto;
+}
+
+.drawer-items {
+}
+
+.drawer h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.owerlay {
+  /* display: none; */
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.cartItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #f3f3f3;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.cartItem .coast {
+  flex-direction: column;
+}
+
+.cartItem img {
+  max-width: 75px;
+  max-height: 75px;
+}
+
+.cardTotalBlock div {
+  flex: 1;
+  height: 1px;
+  border-bottom: 1px dashed #dfdfdf;
+  top: -4px;
+  margin: 0 7px;
+}
+
+.cardTotalBlock li {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.btn-cart {
+  position: relative;
+  display: flex;
+  padding: 10px 20px;
+  width: 100%;
+  background-color: #9dd458;
+  color: floralwhite;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  /* transition: 0.2s ease-in-out; */
+}
+
+.btn-cart img {
+  position: absolute;
+  right: 10px;
+}
+
+.btn-cart:hover {
+  background: lighten(#9dd458, 5%);
+}
+
+.btn-cart:active {
+  background: darken(#9dd458, 5%);
+}
+
+.drawerHead {
+  background: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.basket {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
 }
